@@ -7,8 +7,8 @@ import { AppComponent } from './app.component';
    declarations: [
       AppComponent
    ],
-   imports: [],
-   providers: [],
+   providers: [], 
+   imports: [BrowserModule],
    bootstrap: [AppComponent]
 })
 export class AppModule { }
