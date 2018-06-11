@@ -11,8 +11,8 @@ TodoList на Angular
 1. Построить собственную сборку проекта используя на Angular c использованием:
   1.1. Gulp
   1.1. Typescript
-  1.2. Sass
-  1.3. Jade
+  1.1. Sass
+  1.1. Jade
 1. Реализовать приложение todo-list.
 
 Требования:
