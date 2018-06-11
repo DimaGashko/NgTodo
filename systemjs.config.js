@@ -6,8 +6,8 @@ System.config({
    // map tells the System loader where to look for things
    map: {
        // our app is within the app folder
-       app: 'dist',
-       main: 'main.js',
+       app: 'src/',
+       //main: 'main.js',
 
        // angular bundles
        '@angular/core': 'npm:@angular/core/bundles/core.umd.js',
@@ -20,19 +20,17 @@ System.config({
        '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
 
        // other libraries
-       'rxjs': 'npm:rxjs',
-       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js',
-       'primeng':                   'npm:primeng'      
+       'rxjs': 'npm:rxjs',    
    },
    // packages tells the System loader how to load when no filename and/or no extension
    packages: {
-       app: { main: 'main.js', defaultExtension: 'js' },
-       api: { defaultExtension: 'js' },
-       rxjs: {defaultExtension: 'js'},
-       'node_modules/primeng': {
-           format: 'cjs',
+       app: {
+           main: 'main.js',
            defaultExtension: 'js'
-         }
-        }
-
+       },
+       rxjs: {
+        main: 'Rx.js',
+        defaultExtension: 'js',
+    }
+    }
 });
