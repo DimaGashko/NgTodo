@@ -15,7 +15,7 @@ var AppComponent = /** @class */ (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',
-            template: '<h1>{{appName}} - {{appDescription}}</h1>'
+            template: 'ff' //'<h1>{{appName}} - {{appDescription}}</h1>'
             //templateUrl: './app.component.html',
             //styleUrls: ['./app.component.css']
         })
