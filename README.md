@@ -1,33 +1,27 @@
 # NgTodo
-TodoList на Angular
 
-Цель написание - практика и обучение *Angular*
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
-Ниже приведены цели, задачи, и требования, которые я ставлю перед собой при написании этого приложения 
-(написал это, что бы самому понять, что я хочу сделать).
+## Development server
 
-Задачи:
-- Полностью разобрать структуру проекта, создаваемого @angular/cli
-- Построить собственную сборку проекта используя на Angular c использованием:
-      -- Gulp
-      -- Typescript
-      -- Sass
-      -- Jade
-- Реализовать приложение todo-list.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Требования:
-1. Требования к сборке
-  1.1. Максимально время сборки при внесении изменения (разработка) - 1 секунда (предпочтительно 200ms +/- 100ms)
-  1.1. Структура проекта, похожая на структуру, создаваемую @angular/cli
-  1.1. Поддержка Sass, Jade, Typescript
-1. Требования к коду
-  1.1. TypeScript
-    1.1.1. Выключен строгие режимы TypeScript
-    1.1.1. Использование основных принципов TypeScript-а
-1. Требования к Приложению
-  1.1. Основные действия над задачами: добавление, удаление, редактирование.
-  1.1. Дополнительные действия над задачами: добавление рейтинга задачам (и вывод задач по рейтингу)
-  1.1. Фильтры задач (все, выполненный, текущие)
-  1.1. Сохранение данных локально
-  1.1. Полная адаптивность (минимальная ширина: 300px)
-      
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
