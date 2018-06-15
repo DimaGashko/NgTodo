@@ -27,6 +27,6 @@
     transform-origin: center right;
     margin-top: 6px;
     margin-left: 3px;
-    transition: color .3s; }
+    transition: color 0.3s; }
   .style-checkbox input[type=checkbox]:checked + span:before {
     color: #737373; }
