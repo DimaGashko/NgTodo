@@ -1,9 +1,11 @@
 @import 'src/styles/public/vars.sass'
+@import 'src/styles/public/components.sass'
 
 $deleteWidth: $checkboxPartWidth
 
 \:host
    display: block
+   border-bottom: 1px solid #000
 
 .todo
    &__part
@@ -12,32 +14,29 @@ $deleteWidth: $checkboxPartWidth
 
    &__complete
       width: $checkboxPartWidth
+      text-align: center
 
    &__content
       width: calc(100% - #{$checkboxPartWidth} - #{$deleteWidth})
 
+   &__controls
+      width: $checkboxPartWidth
+      text-align: center
+
    &__delete
+      @extend %resetButton 
       opacity: 0
       visibility: hidden
-      width: $checkboxPartWidth
+      text-align: center
+      width: 40px
+      height: 40px
+      font-size: 30px
+      color: #cc9a9a
+      transition: all $transitionSpeed ease-out  
 
    &__edit
       display: none
       width: calc(100% - #{$checkboxPartWidth})
-
-      
-      top: 0
-      right: 10px
-      bottom: 0
-      width: 40px
-      height: 40px
-      margin: auto 0
-      font-size: 30px
-      color: #cc9a9a
-      margin-bottom: 11px
-      transition: all $transitionSpeed ease-out  
-      border: none
-      background: none
 
 
 \:host:hover .todo__delete

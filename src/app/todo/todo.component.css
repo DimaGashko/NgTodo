@@ -1,36 +1,39 @@
+.todo__delete {
+  border: none;
+  background: none; }
+
 :host {
-  display: block; }
+  display: block;
+  border-bottom: 1px solid #000; }
 
 .todo__part {
   display: inline-block;
   vertical-align: middle; }
 
 .todo__complete {
-  width: 60px; }
+  width: 60px;
+  text-align: center; }
 
 .todo__content {
   width: calc(100% - 60px - 60px); }
 
+.todo__controls {
+  width: 60px;
+  text-align: center; }
+
 .todo__delete {
   opacity: 0;
   visibility: hidden;
-  width: 60px; }
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  color: #cc9a9a;
+  transition: all 0.3s ease-out; }
 
 .todo__edit {
   display: none;
-  width: calc(100% - 60px);
-  top: 0;
-  right: 10px;
-  bottom: 0;
-  width: 40px;
-  height: 40px;
-  margin: auto 0;
-  font-size: 30px;
-  color: #cc9a9a;
-  margin-bottom: 11px;
-  transition: all 0.3s ease-out;
-  border: none;
-  background: none; }
+  width: calc(100% - 60px); }
 
 :host:hover .todo__delete {
   visibility: visible;
