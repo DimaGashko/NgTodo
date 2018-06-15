@@ -1,7 +1,6 @@
 # NgTodo
 
-## Trello Board
-https://trello.com/b/3Ld2KDQ8/ngtodo
+**Trello Board**: https://trello.com/b/3Ld2KDQ8/ngtodo
 
 ## Angular CLI info
 
