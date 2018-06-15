@@ -1,18 +1,30 @@
 @import 'src/styles/public/vars.sass'
 
+$deleteWidth: $checkboxPartWidth
+
+\:host
+   display: block
+
 .todo
    &__part
       display: inline-block
-      vertical-align: center
+      vertical-align: middle
 
    &__complete
       width: $checkboxPartWidth
 
-   
+   &__content
+      width: calc(100% - #{$checkboxPartWidth} - #{$deleteWidth})
 
    &__delete
       opacity: 0
       visibility: hidden
+      width: $checkboxPartWidth
+
+   &__edit
+      display: none
+      width: calc(100% - #{$checkboxPartWidth})
+
       
       top: 0
       right: 10px

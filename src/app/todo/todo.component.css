@@ -1,13 +1,24 @@
+:host {
+  display: block; }
+
 .todo__part {
   display: inline-block;
-  vertical-align: center; }
+  vertical-align: middle; }
 
 .todo__complete {
   width: 60px; }
 
+.todo__content {
+  width: calc(100% - 60px - 60px); }
+
 .todo__delete {
   opacity: 0;
   visibility: hidden;
+  width: 60px; }
+
+.todo__edit {
+  display: none;
+  width: calc(100% - 60px);
   top: 0;
   right: 10px;
   bottom: 0;
