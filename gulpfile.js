@@ -18,7 +18,7 @@ gulp.task('style', () => {
    return gulp.src(SRC.style)
       .pipe($.sass())
       .on('error', $.notify.onError((err) => {
-         return {title: 'Sass'}
+         return {title: 'Sass', message: err}
       }))
       .pipe(gulp.dest(DST.style))
 });
@@ -27,7 +27,7 @@ gulp.task('html', () => {
    return gulp.src(SRC.html)
       .pipe($.pug({pretty: true}))
       .on('error', $.notify.onError((err) => {
-         return {title: 'Jade'}
+         return {title: 'Jade', message: err}
       }))
       .pipe(gulp.dest(DST.html))
 });
