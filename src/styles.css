@@ -354,7 +354,8 @@ a {
 
 ng-todo {
   background: #fff;
-  display: block; }
+  display: block;
+  box-sizing: border-box; }
 
 .head__title {
   padding-top: 20px;
