@@ -8,3 +8,35 @@
 
 .complete-all
    
+
+.checkbox
+   display: none
+
+   &__label, &__span
+      display: inline-block
+
+   &__label
+      width: 25px
+      height: 25px
+
+   &__span
+      width: 100%
+      height: 100%
+      cursor: pointer
+      position: relative
+
+      background: rgba(0,255,0,.3)
+
+      &:before
+         content: "❯"
+         display: block
+         position: absolute
+         color: red
+
+
+   &:checked + &__span
+      &:before
+         color: green
+
+
+
