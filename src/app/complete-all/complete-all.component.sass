@@ -10,10 +10,10 @@
 .complete-all
    
 
-.checkbox
+.style-checkbox
    @include checkbox()
    
-   &__span
+   span
       &:before
          content: "❯"
          display: block
@@ -26,10 +26,10 @@
          margin-left: 3px
          transition: color .3s
 
-
-   &:checked + &__span
-      &:before
-         color: #737373
+   input[type=checkbox]
+      &:checked + span
+         &:before
+            color: #737373
 
 
 

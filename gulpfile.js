@@ -6,7 +6,7 @@ const $ = require('gulp-load-plugins')();
 //PATHS
 const SRC = {
    style: 'src/**/*.sass',
-   html: 'src/**/*.{jade,pug}',
+   html: ['src/**/*.{jade,pug}', '!src/styles/**/*.*'],
 }
 const DST = {
    style: 'src/',

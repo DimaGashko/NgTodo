@@ -5,19 +5,19 @@
   vertical-align: middle;
   text-align: center; }
 
-.checkbox {
-  display: none; }
-  .checkbox label, .checkbox span {
+.style-checkbox {
+  width: 26px;
+  height: 26px; }
+  .style-checkbox, .style-checkbox span {
     display: inline-block; }
-  .checkbox label {
-    width: 26px;
-    height: 26px; }
-  .checkbox span {
+  .style-checkbox input[type=checkbox] {
+    display: none; }
+  .style-checkbox span {
     width: 100%;
     height: 100%;
     cursor: pointer;
     position: relative; }
-  .checkbox__span:before {
+  .style-checkbox span:before {
     content: "❯";
     display: block;
     position: absolute;
@@ -28,5 +28,5 @@
     margin-top: 6px;
     margin-left: 3px;
     transition: color .3s; }
-  .checkbox:checked + .checkbox__span:before {
+  .style-checkbox input[type=checkbox]:checked + span:before {
     color: #737373; }
