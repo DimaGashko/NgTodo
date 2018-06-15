@@ -7,26 +7,26 @@
 
 .checkbox {
   display: none; }
-  .checkbox__label, .checkbox__span {
+  .checkbox label, .checkbox span {
     display: inline-block; }
-  .checkbox__label {
+  .checkbox label {
     width: 26px;
     height: 26px; }
-  .checkbox__span {
+  .checkbox span {
     width: 100%;
     height: 100%;
     cursor: pointer;
     position: relative; }
-    .checkbox__span:before {
-      content: "❯";
-      display: block;
-      position: absolute;
-      color: #e6e6e6;
-      font-size: 22px;
-      transform: rotate(90deg);
-      transform-origin: center right;
-      margin-top: 6px;
-      margin-left: 3px;
-      transition: color .3s; }
+  .checkbox__span:before {
+    content: "❯";
+    display: block;
+    position: absolute;
+    color: #e6e6e6;
+    font-size: 22px;
+    transform: rotate(90deg);
+    transform-origin: center right;
+    margin-top: 6px;
+    margin-left: 3px;
+    transition: color .3s; }
   .checkbox:checked + .checkbox__span:before {
     color: #737373; }

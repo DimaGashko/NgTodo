@@ -1,4 +1,5 @@
 @import 'src/styles/public/vars.sass'
+@import 'src/styles/public/components.sass'
    
 .container
    width: $leftPartWidth
@@ -10,21 +11,9 @@
    
 
 .checkbox
-   display: none
-
-   &__label, &__span
-      display: inline-block
-
-   &__label
-      width: 26px
-      height: 26px
-
+   @include checkbox()
+   
    &__span
-      width: 100%
-      height: 100%
-      cursor: pointer
-      position: relative
-
       &:before
          content: "❯"
          display: block
