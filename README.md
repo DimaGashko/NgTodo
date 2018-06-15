@@ -3,6 +3,8 @@
 ## Trello Board
 https://trello.com/b/3Ld2KDQ8/ngtodo
 
+## Angular CLI info
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
