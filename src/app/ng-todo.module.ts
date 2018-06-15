@@ -1,20 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { NgTogoComponent } from './ng-togo/ng-togo.component';
+import { NgTodoComponent } from './ng-todo.component';
+import { AddComponent } from './add/add.component';
 import { ListComponent } from './list/list.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NgTogoComponent,
-    ListComponent
+    NgTodoComponent,
+    AddComponent,
+    ListComponent,
   ],
   imports: [
     BrowserModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [NgTodoComponent]
 })
-export class AppModule { }
+export class NgTodoModule { }

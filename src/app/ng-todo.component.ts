@@ -1,11 +1,11 @@
 import { Component } from "@angular/core";
 
 @Component({
-   selector: 'app-root',
-   templateUrl: './app.component.html',
-   styleUrls: ['./app.component.css']
+   selector: 'ng-todo',
+   templateUrl: './ng-todo.component.html',
+   styleUrls: ['./ng-todo.component.css']
 })
-export class AppComponent {
+export class NgTodoComponent {
    appName: string = 'NgTodo';
    appDescription: string = 'Todo List On Angular';
 }
