@@ -1,12 +1,11 @@
 @import 'src/styles/public/vars.sass'
-   
+
 .todo
-   position: relative
 
    &__delete
       opacity: 0
       visibility: hidden
-      position: absolute
+      
       top: 0
       right: 10px
       bottom: 0
@@ -17,7 +16,10 @@
       color: #cc9a9a
       margin-bottom: 11px
       transition: all $transitionSpeed ease-out  
+      border: none
+      background: none
+       
 
-      &:hover &__delete
-         visibility: visible
-         opacity: 1
+\:host:hover .todo__delete
+   visibility: visible
+   opacity: 1
