@@ -3,21 +3,17 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngTodo": {
+    "ng-todo": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {
-        "@schematics/angular:component": {
-          "styleext": "sass"
-        }
-      },
+      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngTodo",
+            "outputPath": "dist/ng-todo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -27,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -54,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngTodo:build"
+            "browserTarget": "ng-todo:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngTodo:build:production"
+              "browserTarget": "ng-todo:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngTodo:build"
+            "browserTarget": "ng-todo:build"
           }
         },
         "test": {
@@ -76,7 +72,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.sass"
+              "src/styles.css"
             ],
             "scripts": [],
             "assets": [
@@ -99,7 +95,7 @@
         }
       }
     },
-    "ngTodo-e2e": {
+    "ng-todo-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -107,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "ngTodo:serve"
+            "devServerTarget": "ng-todo:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "ngTodo:serve:production"
+              "devServerTarget": "ng-todo:serve:production"
             }
           }
         },
@@ -125,6 +121,7 @@
           }
         }
       }
-    },
-  "defaultProject": "ngTodo"
+    }
+  },
+  "defaultProject": "ng-todo"
 }

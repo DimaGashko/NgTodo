@@ -18,6 +18,3 @@ import { ListComponent } from './list/list.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-var a: number = 5;
-a = '';
