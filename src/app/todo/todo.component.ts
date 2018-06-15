@@ -6,7 +6,7 @@ import { Component, OnInit } from "@angular/core";
    styleUrls: ['./todo.component.css'],
    host: {'class': 'todo'}
 })
-export class TodoComponent implements OnInit{
+export class TodoComponent implements OnInit {
    ngOnInit() {
 
    }

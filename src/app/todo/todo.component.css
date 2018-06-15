@@ -1,3 +1,10 @@
+.todo__part {
+  display: inline-block;
+  vertical-align: center; }
+
+.todo__complete {
+  width: 60px; }
+
 .todo__delete {
   opacity: 0;
   visibility: hidden;
