@@ -1,3 +1,5 @@
 .container {
   width: 60px;
-  display: inline-block; }
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center; }

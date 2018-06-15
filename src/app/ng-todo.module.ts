@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { NgTodoComponent } from './ng-todo.component';
 
-import { AddComponent } from './add/add.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 import { CompleteAllComponent } from './complete-all/complete-all.component'
 
 import { ListComponent } from './list/list.component';
@@ -12,7 +12,7 @@ import { ListComponent } from './list/list.component';
   declarations: [
     NgTodoComponent,
 
-    AddComponent,
+    AddTodoComponent,
     CompleteAllComponent,
     
     ListComponent,
