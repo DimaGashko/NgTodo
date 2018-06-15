@@ -16,8 +16,8 @@
       display: inline-block
 
    &__label
-      width: 25px
-      height: 25px
+      width: 26px
+      height: 26px
 
    &__span
       width: 100%
@@ -25,18 +25,22 @@
       cursor: pointer
       position: relative
 
-      background: rgba(0,255,0,.3)
-
       &:before
          content: "❯"
          display: block
          position: absolute
-         color: red
+         color: #e6e6e6
+         font-size: 22px
+         transform: rotate(90deg)
+         transform-origin: center right
+         margin-top: 6px
+         margin-left: 3px
+         transition: color .3s
 
 
    &:checked + &__span
       &:before
-         color: green
+         color: #737373
 
 
 
