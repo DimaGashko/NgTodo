@@ -7,4 +7,16 @@ html(lang="en")
       meta(name="viewport", content="width=device-width, initial-scale=1")  
       link(rel="icon" type="image/x-icon" href="favicon.ico")
    body
-      app-root Loading...
+      .wrapper
+         head.head
+            .head__title Todos
+
+         main.main
+            app-root Loading...
+
+         footer.footer 
+            - var orginalURL = "http://todomvc.com/"
+
+            p Original: 
+               a(href=orginalURL)= orginalURL
+      
