@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { NgForm } from "@angular/forms";
 
 @Component({
    selector: 'ng-todo__add_todo',
@@ -8,8 +9,25 @@ import { Component, OnInit, Input } from "@angular/core";
 export class AddTodoComponent implements OnInit {
    newTodoContent: string = '';
 
-   add(content?: string): void {
-      if (content === void 0) content = this.newTodoContent;
+   /**
+    * Запрос на добавление задачи
+    * (добавляет задачу только когда данные валидны)
+    * 
+    * @param {NgForm} ngForm
+    * @returns void 
+    */
+   addRequest(ngForm: NgForm): void {
+      const content = this.getFormatContent(this.newTodoContent);
+
+      if (ngForm.invalid || content === '') {
+         return;
+      }
+
+      this.add(this.newTodoContent);
+      ngForm.reset();
+   }
+
+   add(content: string): void {
       content = this.getFormatContent(this.newTodoContent);
 
       console.log(content);
