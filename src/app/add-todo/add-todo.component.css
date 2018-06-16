@@ -1,5 +1,9 @@
+form {
+  display: inline-block;
+  width: calc(100% - 60px); }
+
 .add-todo {
-  width: calc(100% - 60px);
+  width: 100%;
   padding: 16px;
   padding-left: 0;
   box-sizing: border-box;

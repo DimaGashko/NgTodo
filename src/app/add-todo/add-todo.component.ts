@@ -6,7 +6,9 @@ import { Component, OnInit } from "@angular/core";
    styleUrls: ['./add-todo.component.css'],
 })
 export class AddTodoComponent implements OnInit {
-
+   add(content: string) {
+      console.log(content);
+   }
 
    ngOnInit(): void {
       

@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }    from '@angular/forms';
 
 //Components
 import { NgTodoComponent } from './ng-todo.component';
@@ -21,7 +22,8 @@ import { TodoComponent } from './todo/todo.component';
     TodoComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [NgTodoComponent]
