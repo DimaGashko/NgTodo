@@ -1,4 +1,4 @@
 <!DOCTYPE html>
-<form (submit)="add($event, contentInput.value); contentInput.value = ''">
-  <input class="add-todo" placeholder="What needs to be done?" autofocus #contentInput>
+<form (ngSubmit)="add();">
+  <input class="add-todo" placeholder="What needs to be done?" autofocus required [(ngModule)]="newTodoContent" (keyup)="validateContent(newTodoContent)">
 </form>

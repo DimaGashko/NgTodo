@@ -6,9 +6,39 @@ import { Component, OnInit } from "@angular/core";
    styleUrls: ['./add-todo.component.css'],
 })
 export class AddTodoComponent implements OnInit {
-   add(event: Event, content: string) {
-      event.preventDefault();
-      console.log(content);
+   private newTodoContent: string = '';
+   private maxContentLen: number = 50;
+   private minContentLen: number = 1;
+
+   add() {
+      const content = this.getFormatContent(this.newTodoContent);
+
+      if (this.validateContent(content)) {
+         console.log(content + '|');
+      }
+   }
+
+   getFormatContent(content: string): string {
+      return content.trim();
+   }
+
+   validateContent(content: string): boolean {
+      content = this.getFormatContent(content);
+
+      if (content.length === 0) {
+         this.errMes(`Min length: ${this.minContentLen}`);
+         return false;
+      }
+      if (content.length > this.maxContentLen) {
+         this.errMes(`Max length: ${this.maxContentLen}`);
+         return false;
+      }
+         
+      return true;
+   }
+
+   errMes(mes: string): void {
+      console.error(mes);
    }
 
    ngOnInit(): void {

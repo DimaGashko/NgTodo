@@ -1,8 +1,10 @@
 doctype html
-form((submit)="add($event, contentInput.value); contentInput.value = ''")
+form((ngSubmit)="add();")
    input(
       class="add-todo" 
       placeholder="What needs to be done?" 
       autofocus 
-      #contentInput
-   ) 
+      required
+      [(ngModule)]="newTodoContent",
+      (keyup)="validateContent(newTodoContent)"
+   )  
