@@ -5,7 +5,7 @@ $deleteWidth: $checkboxPartWidth
 
 \:host
    display: block
-   border-bottom: 1px solid #000
+   border-bottom: 1px solid #eee 
 
 .todo
    &__part
@@ -33,6 +33,10 @@ $deleteWidth: $checkboxPartWidth
       font-size: 30px
       color: #cc9a9a
       transition: all $transitionSpeed ease-out  
+      outline: none 
+
+      &:focus
+         transform: rotate(90deg)
 
    &__edit
       display: none

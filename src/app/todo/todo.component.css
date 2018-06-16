@@ -4,7 +4,7 @@
 
 :host {
   display: block;
-  border-bottom: 1px solid #000; }
+  border-bottom: 1px solid #eee; }
 
 .todo__part {
   display: inline-block;
@@ -29,7 +29,10 @@
   height: 40px;
   font-size: 30px;
   color: #cc9a9a;
-  transition: all 0.3s ease-out; }
+  transition: all 0.3s ease-out;
+  outline: none; }
+  .todo__delete:focus {
+    transform: rotate(90deg); }
 
 .todo__edit {
   display: none;
