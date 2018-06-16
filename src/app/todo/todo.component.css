@@ -4,7 +4,9 @@
 
 :host {
   display: block;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #ededed;
+  font-size: 0;
+  padding: 15px 0; }
 
 .todo__part {
   display: inline-block;
@@ -15,10 +17,15 @@
   text-align: center; }
 
 .todo__content {
-  width: calc(100% - 60px - 60px); }
+  width: calc(100% - 60px - 45px);
+  white-space: pre-line;
+  word-break: break-all;
+  line-height: 1.2;
+  transition: color 0.4s;
+  font-size: 24px; }
 
 .todo__controls {
-  width: 60px;
+  width: 45px;
   text-align: center; }
 
 .todo__delete {

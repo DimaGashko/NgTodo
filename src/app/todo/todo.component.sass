@@ -1,11 +1,13 @@
 @import 'src/styles/public/vars.sass'
 @import 'src/styles/public/components.sass'
 
-$deleteWidth: $checkboxPartWidth
+$deleteWidth: 45px
 
 \:host
    display: block
-   border-bottom: 1px solid #eee 
+   border-bottom: 1px solid #ededed
+   font-size: 0
+   padding: 15px 0
 
 .todo
    &__part
@@ -18,9 +20,16 @@ $deleteWidth: $checkboxPartWidth
 
    &__content
       width: calc(100% - #{$checkboxPartWidth} - #{$deleteWidth})
+      white-space: pre-line
+      word-break: break-all
+      line-height: 1.2
+      transition: color 0.4s
+      font-size: 24px
+      
+
 
    &__controls
-      width: $checkboxPartWidth
+      width: $deleteWidth
       text-align: center
 
    &__delete
