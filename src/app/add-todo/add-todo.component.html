@@ -1,4 +1,4 @@
 <!DOCTYPE html>
-<form (submit)="create(contentInput.value)">
+<form (submit)="add($event, contentInput.value); contentInput.value = ''">
   <input class="add-todo" placeholder="What needs to be done?" autofocus #contentInput>
 </form>
