@@ -7,7 +7,8 @@
 
 .style-checkbox {
   width: 26px;
-  height: 26px; }
+  height: 26px;
+  user-select: none; }
   .style-checkbox, .style-checkbox span {
     display: inline-block; }
   .style-checkbox input[type=checkbox] {
