@@ -1,10 +1,14 @@
 doctype html
-form((ngSubmit)="add();")
+form(
+   (ngSubmit)="add();"
+)
    input(
       class="add-todo" 
-      placeholder="What needs to be done?" 
+      placeholder="What needs to be done?"
+      name="todocontent" 
       autofocus 
       required
-      [(ngModule)]="newTodoContent",
-      (keyup)="validateContent(newTodoContent)"
-   )  
+      maxlength=5
+      #contentInput
+      [(ngModel)]="newTodoContent",
+   ) 

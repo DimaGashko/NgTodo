@@ -1,6 +1,8 @@
 form {
   display: inline-block;
   width: calc(100% - 60px); }
+  form.ng-invalid .add-todo {
+    background: rgba(255, 0, 0, 0.05); }
 
 .add-todo {
   width: 100%;
