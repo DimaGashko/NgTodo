@@ -1,4 +1,5 @@
 @import 'src/styles/public/vars.sass'
+@import 'src/styles/public/components.sass'
 
 \:host 
    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1)
@@ -11,9 +12,12 @@ header
 footer
    position: relative
    color: #777
-   padding: 10px 15px
+   padding: 10px 15px 
    text-align: center
-   border-top: 1px solid #e6e6e6   
+   border-top: 1px solid #e6e6e6
+   user-select: none  
+    
+   text-align: center 
 
    &:before
       content: ''
@@ -24,5 +28,30 @@ footer
       height: 100%
       overflow: hidden
       box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 8px 0 -3px #f6f6f6, 0 9px 1px -3px rgba(0, 0, 0, 0.2), 0 16px 0 -6px #f6f6f6, 0 17px 2px -6px rgba(0, 0, 0, 0.2)
+
+   .left_items
+      float: left
+      cursor: context-menu
+      user-select: none
+
+   .clear_completed
+      @extend %resetButton
+
+      float: right
+
+      &:hover
+         text-decoration: underline
+
+   .filters
+      display: inline-block
+
+.fotter__content
+   @extend %clearfix;
+
+   position: relative
+   z-index: 2
+      
+
+
 
 
