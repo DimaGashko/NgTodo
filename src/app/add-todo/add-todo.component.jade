@@ -1,6 +1,7 @@
 doctype html
 form(
-   (ngSubmit)="add();"
+   (ngSubmit)="add();",
+   #todoForm="ngForm"
 )
    input(
       class="add-todo" 
@@ -8,7 +9,7 @@ form(
       name="todocontent" 
       autofocus 
       required
-      maxlength=5
+      maxlength=50
       #contentInput
       [(ngModel)]="newTodoContent",
    ) 
