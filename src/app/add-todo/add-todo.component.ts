@@ -23,15 +23,12 @@ export class AddTodoComponent implements OnInit {
          return;
       }
 
-      this.add(this.newTodoContent);
-      ngForm.reset();
+      this.add(content);
+      this.newTodoContent = '';
    }
 
    add(content: string): void {
-      content = this.getFormatContent(this.newTodoContent);
-
       console.log(content);
-      this.newTodoContent = '';
    }
 
    getFormatContent(content: string): string {

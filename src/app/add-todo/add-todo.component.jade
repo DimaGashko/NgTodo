@@ -5,7 +5,6 @@ form((ngSubmit)="addRequest(todoForm);", #todoForm="ngForm")
       placeholder="What needs to be done?"
       name="todocontent" 
       autofocus 
-      required
-      maxlength=15,
+      maxlength=250,
       [(ngModel)]="newTodoContent"
    )   
