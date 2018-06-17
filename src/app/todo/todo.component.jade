@@ -1,9 +1,9 @@
 .todo__complete.todo__part
    label.style-checkbox
-      input(type="checkbox")
+      input(type="checkbox", [checked]="todo.complete")
       span
 
-.todo__content.todo__part Lorem ipsum, dolor sit amet orem ipsum, dolor sit amet 
+.todo__content.todo__part {{todo.content}}
 input.todo__edit.todo__part
 
 .todo__controls.todo__part

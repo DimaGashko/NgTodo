@@ -1,10 +1,10 @@
 
 <div class="todo__complete todo__part">
   <label class="style-checkbox">
-    <input type="checkbox"/><span></span>
+    <input type="checkbox" [checked]="todo.complete"/><span></span>
   </label>
 </div>
-<div class="todo__content todo__part">Lorem ipsum, dolor sit amet orem ipsum, dolor sit amet </div>
+<div class="todo__content todo__part">{{todo.content}}</div>
 <input class="todo__edit todo__part"/>
 <div class="todo__controls todo__part">
   <button class="todo__delete">×</button>
