@@ -1,9 +1,6 @@
-interface ITodo {
-   content: string;
-   complete: boolean;
-}
+import { Todo } from './todo';
 
-export const todos: ITodo[] = [
+export const todos: Todo[] = [
    { content: 'Bread', complete: false },
    { content: 'Water', complete: true },
    { content: 'Notebook', complete: true },

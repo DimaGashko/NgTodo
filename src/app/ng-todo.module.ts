@@ -11,6 +11,8 @@ import { CompleteAllComponent } from './complete-all/complete-all.component'
 import { ListComponent } from './list/list.component';
 import { TodoComponent } from './todo/todo.component';
 
+import { TodoService } from './todo.service';
+
 @NgModule({
   declarations: [
     NgTodoComponent,
@@ -25,7 +27,11 @@ import { TodoComponent } from './todo/todo.component';
     BrowserModule,
     FormsModule,
   ],
-  providers: [],
-  bootstrap: [NgTodoComponent]
+  providers: [
+    TodoService,
+  ],
+  bootstrap: [
+    NgTodoComponent
+  ]
 })
 export class NgTodoModule { }
