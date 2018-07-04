@@ -20,7 +20,7 @@ export class TodoService {
     this._todos = this.http.get<Todo[]>(this._todosUrl)
   }
 
-  get todos(): Observable<Todo[]> {
+  getTodos(): Observable<Todo[]> {
     return this._todos;
   }
 

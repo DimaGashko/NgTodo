@@ -13,7 +13,5 @@ export class NgTodoComponent {
       
    }
 
-   get todos(): Observable<Todo[]> {
-      return this.todoService.todos;
-   }
+   
 }
