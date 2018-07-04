@@ -14,12 +14,8 @@ export class ListComponent implements OnInit {
       
   }
 
-  ngOnInit() {
+  ngOnInit() { 
 
-  }
-
-  get todos(): Observable<Todo[]> {
-     return this.todoService.todos;
   }
 
 }

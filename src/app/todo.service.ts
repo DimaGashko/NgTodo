@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { Todo } from './todo';
 
 import { Observable, from, interval } from 'rxjs';
+import { isTemplateElement } from 'babel-types';
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +15,21 @@ export class TodoService {
   }
 
   private _todosUrl: string = 'api/todos';
-  private _todos: Observable<Todo[]>;
 
-  private _load() {
-    this._todos = this.http.get<Todo[]>(this._todosUrl)
+  private _todos: Todo[] = [];
+  
+  get todos(): Todo[] {
+    return this._todos;
   }
 
-  getTodos(): Observable<Todo[]> {
-    return this._todos;
+  private _load() {
+    this._todos = [];
+    
+    this.http.get<Todo[]>(this._todosUrl).forEach((item) => {
+      item.forEach(todo => { 
+        this._todos.push(new Todo(todo.id, todo.content, todo.complete));
+      });
+    });
   }
 
   addTodo(content: string, complete: boolean = false): void {

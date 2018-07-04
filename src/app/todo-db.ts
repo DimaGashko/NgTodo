@@ -1,6 +1,7 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
 import { Todo } from './todo';
+import { Observable } from 'rxjs';
 
 const PREFIX = 'ng-todo-todos'
 
@@ -27,9 +28,14 @@ export class httpData implements InMemoryDbService {
       } else {
          todos = defaultTodos;
       }
-   
+      
       return { todos: todos };
    }
+
+   post() { 
+      console.log(arguments)
+   }
+
 }
 
 function parseJsonTodos(jsonTodos) {

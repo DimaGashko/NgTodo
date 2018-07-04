@@ -34,7 +34,7 @@ import { httpData } from './todo-db';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(httpData),
+    HttpClientInMemoryWebApiModule.forRoot(httpData, {delay: 1500}),
   ],
   providers: [
     TodoService,
