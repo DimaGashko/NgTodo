@@ -1,5 +1,4 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Todo } from './todo';
 
 export class httpData implements InMemoryDbService {
    createDb() {
@@ -9,6 +8,9 @@ export class httpData implements InMemoryDbService {
          {content: 'Notebook', complete: false},
          {content: 'Paper', complete: false},
       ];
-
    }
+}
+
+function getRandomId() {
+   return '_' + Math.random().toString(36).slice(-9);
 }
