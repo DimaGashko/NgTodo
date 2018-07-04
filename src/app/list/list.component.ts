@@ -16,7 +16,9 @@ export class ListComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.todos = this.todoService.getTodos();
+    this.todoService.getTodos().forEach((todo) => {
+      this.todos.push(todo);
+    });
   }
 
 }
