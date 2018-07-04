@@ -19,7 +19,6 @@ import { TodoService } from './todo.service';
 
 import { httpData } from './todo-db';
 
-console.log(AppComponent)
 @NgModule({
   declarations: [
     AppComponent,

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'ng-todo__list',
@@ -9,16 +10,16 @@ import { Todo } from '../todo';
   styleUrls: ['./list.component.sass']
 })
 export class ListComponent implements OnInit {
-  todos: Todo[] = [];
-
-  constructor(private todoService: TodoService) { 
-
+  constructor(private todoService: TodoService) {
+      
   }
 
   ngOnInit() {
-    this.todoService.getTodos().forEach((todo) => {
-      this.todos.push(todo);
-    });
+
+  }
+
+  get todos(): Observable<Todo[]> {
+     return this.todoService.todos;
   }
 
 }

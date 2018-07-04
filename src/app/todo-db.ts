@@ -1,20 +1,16 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 
-interface ITodo {
-   id: string;
-   content: string;
-   complete: boolean;
-}
+import { Todo } from './todo';
 
 const PREFIX = 'ng-todo-todos'
 
-const DEFTodo: ITodo = {
+const DEFTodo: Todo = {
    id: '0',
    content: 'Item',
    complete: false,
 }
 
-const defaultTodos: ITodo[] = [
+const defaultTodos: Todo[] = [
    {id: '1', content: 'Bread', complete: true},
    {id: '2', content: 'Water', complete: true},
    {id: '3', content: 'Notebook', complete: false},
@@ -23,18 +19,22 @@ const defaultTodos: ITodo[] = [
 
 export class httpData implements InMemoryDbService {
    createDb() {
+      let todos: Todo[] = [];
+
       if (PREFIX in localStorage) {
          const jsonTodos = localStorage[PREFIX];
-         return parseJsonTodos(jsonTodos);
+         todos = parseJsonTodos(jsonTodos);
+      } else {
+         todos = defaultTodos;
       }
    
-      return defaultTodos;
+      return { todos: todos };
    }
 }
 
 function parseJsonTodos(jsonTodos) {
    try {
-      const todos: ITodo[] = JSON.parse(jsonTodos);
+      const todos: Todo[] = JSON.parse(jsonTodos);
 
       return getCorrectTodos(todos);
 
@@ -45,7 +45,7 @@ function parseJsonTodos(jsonTodos) {
 
 }
 
-function getCorrectTodos(todos: ITodo[]): ITodo[] { 
+function getCorrectTodos(todos: Todo[]): Todo[] { 
    return todos.map(todo => {
       return Object.assign({}, DEFTodo, todo);
    });

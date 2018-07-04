@@ -1,4 +1,7 @@
 import { Component } from "@angular/core";
+import { TodoService } from "../todo.service";
+import { Observable } from "rxjs";
+import { Todo } from "../todo";
 
 @Component({
    selector: 'ng-todo',
@@ -6,6 +9,11 @@ import { Component } from "@angular/core";
    styleUrls: ['./ng-todo.component.css']
 })
 export class NgTodoComponent {
-   appName: string = 'NgTodo';
-   appDescription: string = 'Todo List On Angular';
+   constructor(private todoService: TodoService) {
+      
+   }
+
+   get todos(): Observable<Todo[]> {
+      return this.todoService.todos;
+   }
 }

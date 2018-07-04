@@ -1,6 +1,9 @@
 export class Todo {
    
-   constructor(public content: string, public complete: boolean) {
+   constructor(
+      public id: string,
+      public content: string,
+      public complete: boolean) {
       
    }
 }
