@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Todo } from './todo';
+import { Todo, IObjTodo } from './todo';
 
 import { Observable, from, interval } from 'rxjs';
 import { isTemplateElement } from 'babel-types';
@@ -25,9 +25,9 @@ export class TodoService {
   private _load() {
     this._todos = [];
     
-    this.http.get<Todo[]>(this._todosUrl).forEach((item) => {
+    this.http.get<IObjTodo[]>(this._todosUrl).forEach((item) => {
       item.forEach(todo => { 
-        this._todos.push(new Todo(todo.id, todo.content, todo.complete));
+        this._todos.push(new Todo(todo));
       });
     });
   }
