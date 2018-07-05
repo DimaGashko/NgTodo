@@ -5,13 +5,16 @@ export interface IObjTodo {
 }
 
 export class Todo {
+   id: string;
+   content: string;
+   complete: boolean;
    
-   constructor(
-      public id: string,
-      public content: string,
-      public complete: boolean)
-   {
-      this.correct();      
+   constructor(todoObj: IObjTodo) {
+      this.id = (todoObj.id !== void 0) ?
+         todoObj.id : this.getRandomId();
+      
+      this.content = todoObj.content;
+      this.complete = todoObj.complete;     
    }
 
    private correct() {
