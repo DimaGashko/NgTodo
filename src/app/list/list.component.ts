@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { TodoService } from '../todo.service';
-import { Todo } from '../todo';
-import { Observable } from 'rxjs';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'ng-todo__list',
@@ -10,12 +9,18 @@ import { Observable } from 'rxjs';
   styleUrls: ['./list.component.sass']
 })
 export class ListComponent implements OnInit {
-  constructor(private todoService: TodoService) {
+  constructor(private todoService: TodoService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
       
   }
 
   ngOnInit() { 
-
+    this.activatedRoute.params.forEach((params: Params) => {
+      let type = params.type;
+      console.log(type);
+    })
   }
+
 
 }

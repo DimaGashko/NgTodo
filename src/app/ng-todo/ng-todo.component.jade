@@ -3,15 +3,15 @@ header
   ng-todo__add_todo
 
 section.main
-  ng-todo__list
+  router-outlet
 
 footer 
   .fotter__content
     .left_items <strong>1</strong> items left
 
     .filters
-      a.filter.filter-selected(href="/all") All
-      a.filter(href="/active") Active
-      a.filter(href="/completed") Completed
+      a.filter(routerLink="/all" routerLinkActive="filter-selected") All
+      a.filter(routerLink="/active" routerLinkActive="filter-selected") Active
+      a.filter(routerLink="/completed" routerLinkActive="filter-selected") Completed
 
     button.clear_completed Clear Completed

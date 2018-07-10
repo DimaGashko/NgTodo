@@ -3,9 +3,6 @@ import { HttpClient } from '@angular/common/http';
 
 import { Todo, IObjTodo } from './todo';
 
-import { Observable, from, interval } from 'rxjs';
-import { isTemplateElement } from 'babel-types';
-
 @Injectable({
   providedIn: 'root'
 })
