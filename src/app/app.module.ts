@@ -19,6 +19,7 @@ import { TodoComponent } from './todo/todo.component';
 import { TodoService } from './todo.service';
 
 import { httpData } from './todo-db';
+import { FiltersService } from './filters.service';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { httpData } from './todo-db';
   ],
   providers: [
     TodoService,
+    FiltersService,
   ],
   bootstrap: [
     AppComponent
