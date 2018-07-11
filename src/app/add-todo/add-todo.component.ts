@@ -9,24 +9,6 @@ import { NgForm } from "@angular/forms";
 export class AddTodoComponent implements OnInit {
    newTodoContent: string = '';
 
-   /**
-    * Запрос на добавление задачи
-    * (добавляет задачу только когда данные валидны)
-    * 
-    * @param {NgForm} ngForm
-    * @returns void 
-    */
-   addRequest(ngForm: NgForm): void {
-      const content = this.getFormatContent(this.newTodoContent);
-
-      if (ngForm.invalid || content === '') {
-         return;
-      }
-
-      this.add(content);
-      this.newTodoContent = '';
-   }
-
    add(content: string): void {
       console.log(content);
    }

@@ -1,10 +1,8 @@
 doctype html
-form((ngSubmit)="addRequest(todoForm);", #todoForm="ngForm")
+form((ngSubmit)="add();")
    input(
       class="add-todo" 
       placeholder="What needs to be done?"
       name="todocontent" 
       autofocus 
-      maxlength=250,
-      [(ngModel)]="newTodoContent"
    )   
