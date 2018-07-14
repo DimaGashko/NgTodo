@@ -26,6 +26,9 @@ export class httpData implements InMemoryDbService {
       return { todos };
    }
 
+   //get() { }
+   //put() { }
+
 }
 
 function parseJsonTodos(jsonTodos) {
